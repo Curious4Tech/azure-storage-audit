@@ -1,0 +1,12 @@
+azure-identity 
+azure-mgmt-resource 
+azure-mgmt-storage 
+azure-mgmt-monitor 
+pandas 
+numpy 
+matplotlib 
+seaborn 
+tqdm 
+colorama 
+tabulate 
+xlsxwriter
