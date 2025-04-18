@@ -29,6 +29,7 @@ A comprehensive security auditing tool for Azure Storage Accounts that performs 
 
 ```bash
 Python 3.8+
+Higly recommended to use Python 3.10
 Azure Subscription
 Azure CLI or credentials configured
 ```
