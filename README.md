@@ -42,7 +42,14 @@ git clone https://github.com/yourusername/azure-storage-audit.git
 cd azure-storage-audit/Storage_Audit
 ```
 
-2. Install required packages:
+2. Create and activate virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+.\venv\Scripts\activate   # Windows
+```
+
+3. Install required packages:
 ```bash
 pip install -r requirements.txt
 ```
