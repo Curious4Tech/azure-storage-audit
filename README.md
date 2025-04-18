@@ -2,7 +2,7 @@
 
 A comprehensive security auditing tool for Azure Storage Accounts that performs automated security checks, generates visual analytics, and provides detailed HTML reports across your entire Azure tenant.
 
-![Azure Storage Audit](path_to_demo_image.png)
+
 
 ## 🌟 Key Features
 
