@@ -133,4 +133,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## ✨ Author
 
-Created by Azizou GNANKPE - [@Curious4Tech](https://www.linkedin.com/in/azizou-gnankpe/)
+Created by **`Azizou GNANKPE`** - [@Curious4Tech](https://www.linkedin.com/in/azizou-gnankpe/)
