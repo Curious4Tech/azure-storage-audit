@@ -39,7 +39,7 @@ Azure CLI or credentials configured
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/azure-storage-audit.git
-cd azure-storage-audit
+cd azure-storage-audit/Storage_Audit
 ```
 
 2. Install required packages:
