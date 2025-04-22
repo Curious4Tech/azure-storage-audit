@@ -91,6 +91,20 @@ class AzureStorageAuditor:
                 'recommendation': 'Configure lifecycle policies for cost optimization'
             }
         }
+  
+        
+    def print_welcome_message(self):
+        # ASCII art for "Azure STORAGE AUDIT" in block style
+        ascii_art = """
+  █████╗ ███████╗██╗   ██╗██████╗ ███████╗    ███████╗████████╗ ██████╗ ██████╗  █████╗  ██████╗ ███████╗     █████╗ ██╗   ██╗██████╗ ██╗████████╗
+ ██╔══██╗╚══███╔╝██║   ██║██╔══██╗██╔════╝    ██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██╔══██╗██╔════╝ ██╔════╝    ██╔══██╗██║   ██║██╔══██╗██║╚══██╔══╝
+ ███████║  ███╔╝ ██║   ██║██████╔╝█████╗      ███████╗   ██║   ██║   ██║██████╔╝███████║██║  ███╗█████╗      ███████║██║   ██║██║  ██║██║   ██║   
+ ██╔══██║ ███╔╝  ██║   ██║██╔══██╗██╔══╝      ╚════██║   ██║   ██║   ██║██╔══██╗██╔══██║██║   ██║██╔══╝      ██╔══██║██║   ██║██║  ██║██║   ██║   
+ ██║  ██║███████╗╚██████╔╝██║  ██║███████╗    ███████║   ██║   ╚██████╔╝██║  ██║██║  ██║╚██████╔╝███████╗    ██║  ██║╚██████╔╝██████╔╝██║   ██║   
+ ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝   
+"""
+        print(f"\n{Fore.GREEN}{ascii_art}{Style.RESET_ALL}")
+
     def create_rounded_box(self, text, padding=2):
         """Create a rounded box around text"""
         width = len(text) + padding * 2
@@ -800,9 +814,7 @@ class AzureStorageAuditor:
         current_time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
         print(f"\nCurrent Date and Time (UTC): {current_time}")
         print(f"Current User's Login: {os.getenv('USERNAME', 'Unknown')}\n")
-        
-        # Welcome message with rounded borders
-        print(f"\n{Back.BLUE}{Fore.WHITE}{self.create_rounded_box('🔒 AZURE STORAGE ACCOUNT SECURITY AUDIT 🔒')}{Style.RESET_ALL}")
+  
         print(f"{Fore.CYAN}Starting comprehensive security audit of Azure storage accounts...{Style.RESET_ALL}")
         
         if not self.authenticate():
@@ -841,12 +853,13 @@ class AzureStorageAuditor:
         self.export_results()
         
         # Completion message
-        print(f"\n{Back.GREEN}{Fore.WHITE}{self.create_rounded_box('✅ AUDIT COMPLETED SUCCESSFULLY')}{Style.RESET_ALL}")
+        print(f"\n{Fore.GREEN}{self.create_rounded_box('✅ AUDIT COMPLETED SUCCESSFULLY')}{Style.RESET_ALL}")
         print(f"Audit reports and visualizations are available in the 'azure_storage_audit_reports' directory.")
         print(f"\n{Fore.CYAN}{self.create_simple_rounded_header('🙏 Thank you for using Azure Storage Account Security Audit Tool developped by Curious4tech')}{Style.RESET_ALL}")
 if __name__ == "__main__":
     try:
         auditor = AzureStorageAuditor()
+        auditor.print_welcome_message()
         auditor.run_audit()
     except KeyboardInterrupt:
         print(f"\n{Fore.YELLOW}Audit process interrupted by user.{Style.RESET_ALL}")
